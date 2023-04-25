@@ -29,31 +29,28 @@ h2, h4, p {
     width: 100%;
     height: 45%;
     padding: 30px;
-
 }
 
 .bottom-section {
     width: 100%;
     height: 55%;
     color: white;
+    display: flex;
+    flex-direction: row;
 }
 
 .bottom-left {
-    display: inline-block;
-    vertical-align: top;
     padding: 20px;
-    width: 50%;
     height: 100%;
     background-color: #2ab2af;
+    flex-basis: 50%;
 }
 
 .bottom-right {
-    display: inline-block;
-    vertical-align: top;
     padding: 20px;
-    width: 50%;
     height: 100%;
     background-color: #2EBFBD;
+    flex-basis: 50%;
 }
 
 .top-section h2 {
@@ -120,4 +117,20 @@ button:hover {
     list-style-type: none;
     font-size: 0.9rem;
     opacity: 0.7;
+}
+
+@media (max-width: 576px){
+    .card {
+        width: 300px;
+        height: 700px;
+    }
+    
+    .bottom-section {
+        flex-direction: column;
+        height: 65%;
+    }
+
+    .top-section {
+        height: 35%;
+    }
 }
